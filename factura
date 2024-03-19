@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{datetime}
+\usepackage[spanish]{babel}
+\usepackage[margin=2cm]{geometry}
+\usepackage{array} % Necesario para el entorno 'tabular'
+
+\begin{document}
+	
+\begin{tikzpicture}[remember picture, overlay]
+	\node[anchor=north] at ([yshift=-1cm]current page.north) {\textbf{\Huge Factura}};
+	\node[anchor=north west] at (current page.north west) {\includegraphics[width=3cm]{/home/sarabia/pruebaslatex/imagenes/Logo de empresa.png}}; % Area de la imagen 
+	
+	% Texto para la factura izquierdo
+	\node[anchor=north west, text width=0.4\textwidth] at ([yshift=-4cm, xshift=2cm]current page.north west) {
+		\textbf{RFC del Emisor:} LTE221019B37 \\
+		\textbf{Nombre del Emisor:} Laboratorio Tennus \\
+		\textbf{RFC del receptor:}     \\
+		\textbf{Nombre del receptor:} \\
+		\textbf{Codigo postal receptor:}  \\
+		\textbf{Regimen fiscal:}  \\
+		\textbf{Uso CFDI:}  \\
+        \vspace{7cm}
+        \textbf{Moneda:}  \\
+        \textbf{Formato de pago:} \\
+        \textbf{Metodo de pago:} \\
+        \vspace{1cm}
+        \textbf{Sello digital del CFDI:}  \\
+        D3juKWm1N9OtC88SMZ++DLHShqnbUaENly/MJHgZ4Yy9vPQ8DgxY3sPC0rdoB6NmUqO0R2pBGn718Eo+LsqYqoKFR5CXefs+JLEnnFLty6lNq3YpTTLD2P61Moh7qjeEVxe0IviC9Ezpq
+        lHarvMJD8BPAx8/QNWL49EHIw08XPibqIP1zvhwD+jxlDhNa0K5Y6VCCof/Kdm8APmUvV1qvbbmkx5LF1UWF4uCKBAMRcozcQYJa9mKA7FrnntJG59DEFVs8g3zCQsnDaBSwuT3gadRfP
+        IzJP3whBZr/5HIj4S5aPzDWvU75c2Rwhn/Ma+MS2XCIP/7WfHbLn8HNAcMA== \\
+        \textbf{Sello digital del SAT:}  \\ 
+        dUFB+KOmSFnCKkVuFXCki/1NDzAGExR2V9bf4mBP6oNIsA9jOjeT4ttgM6PYqnXMr/6aJoyaXV+3iRmp4K5w6EcXggP/9NaBuh5CySU4DYKgBkxD1jwcMjnobIs1TDZEbH9GT7lo7lETz0vZ
+		pGWyNdxK5Km3OEpvIMZQGZoUdgndTHSq8AbaJGsgGyytFtVclvCycnKD+So18YiWCcnQlSfBbAFuFbw22f5RCMBcsSIRWzqcmvv0vQFQLntdqjfzUHdFXEs7gAFyoGVEFbEMrXcE5Cm8
+        y3AEL67zjsr3O1cfe85JUwJxXgbFEY/vU3rqe5lBt9KI3YYCWKXTZ0hFsg== \\ 
+		\vspace{1cm}
+		\includegraphics{/home/sarabia/pruebaslatex/imagenes/latexImage_23b40b6cfc36fb2bd2ae52d885ae2227.png}
+		
+
+	};
+	
+% Texto para la factura derecho
+\node[anchor=north east, text width=0.6\textwidth] at ([yshift=-4cm]current page.north east) {
+    \textbf{Folio fiscal:} \\
+    \textbf{No. de serie del CSD:}  \\
+    \textbf{Código postal, fecha y hora de emisión:} \today \quad \currenttime \\
+    \textbf{Efecto de comprobante:} \\
+    \textbf{Regimen fiscal:}  \\
+    \textbf{Exportacion:}  \\
+    \vspace{7cm}
+    \textbf{Subtotal:}\\
+    \textbf{Impuesto trasladados:}  IVA\\
+    \textbf{Total:}\\
+    \vspace{5cm}
+    \textbf{Cadena Original del complemento de certificación digital del SAT:}\hfill\\
+	|1.1|EBEB4876-D2CC-432D-A8D0-720A760AF607|2024-01-18T08:57:56|SAT970701NN3|pD3juKWm1N9OtC88SMZ++DLHShqnbUaENly/MJHgZ4Yy9
+vPQ8DgxY3sPC0rdoB6NmUqO0R2pBGn718Eo+LsqYqoKFR5CXefs+JLEnnFLty6lNq3YpTTLD2P61Moh7qjeEVxe0IviC9EzpqlHarvMJD8BPAx8/QNWL4
+9EHIw08XPibqIP1zvhwD+jxlDhNa0K5Y6VCCof/Kdm8APmUvV1qvbbmkx5LF1UWF4uCKBAMRcozcQYJa9mKA7FrnntJG59DEFVs8g3zCQsnDaBSwuT
+3gadRfPIzJP3whBZr/5HIj4S5aPzDWvU75c2Rwhn/Ma+MS2XCIP/7WfHbLn8HNAcMA==|00001000000504465028||\\
+    \textbf{RFC del proveedor de certificación:}\\
+	\textbf{No. de serie del certificado SAT:}
+};
+
+
+\end{tikzpicture}
+
+\vspace{5cm}
+\begin{center}
+	\begin{tabular}{|>{\centering\arraybackslash}p{2.5cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{1.3cm}|>{\centering\arraybackslash}p{1.3cm}|>{\centering\arraybackslash}p{1.3cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|}
+		\hline
+		\textbf{Clave del producto y/o servicio} & \textbf{No. identificacion} & 
+		\textbf{Cantidad} & \textbf{Clave de unidad} & \textbf{Unidad} & \textbf{Valor unitario} & \textbf{Descuento} & \textbf{Objeto del impuesto} \\
+		\hline
+		&  &  &  & & & & \\ \hline
+		\textbf{Descripcion} & \multicolumn{6}{|c|}{} \\ \cline{1-7}
+		\textbf{Numero de pedimiento} & \textbf{Numero de cuenta predial} \\ \cline{1-2}
+		&  \\ \cline{1-2}       
+	\end{tabular}
+\end{center}
+
+\vspace{1cm}
+
+
+
+\end{document}
