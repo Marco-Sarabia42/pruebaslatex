@@ -1,0 +1,107 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{datetime}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,left
+margin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+
+\AddToShipoutPictureBG{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{/home/sarabia/pruebaslatex/imagenes/encabezado.png} % Ruta de la imagen de fondo
+}
+
+\begin{document}
+
+\begin{flushleft}
+\end{flushleft}
+
+\begin{flushright}
+    \textcolor{blue}{\textbf{COTIZACIÓN DE ESTUDIOS DE LABORATORIO}} \\
+    Ciudad de México, CDMX, \today 
+\end{flushright}
+    
+
+    \begin{flushleft} 
+        \textbf{\sffamily  Estimado Cliente:}
+        \newline  % Nueva línea
+        \sffamily  % Cambiar a fuente sin serifas
+        Le agradecemos su preferencia y nos complace presentar la siguiente cotización para los estudios de laboratorio que ha solicitado. 
+    \end{flushleft}
+
+
+    %Este apartado es para la creacion de la tabla
+    %la cual esta centrada 
+    \begin{center}
+        \begin{tabular}{|c|c|} 
+        \hline 
+        \textbf{PRUEBA} &  \textbf{COSTO UNITARIO} 
+        \\ \hline 
+         este es un ejemplo de como se veria las celdas al rellarlas &    \\ \hline
+             &    \\ \hline
+             &    \\ \hline
+             &    \\ \hline
+             &    \\ \hline
+             &    \\ \hline
+        \end{tabular}
+        \end{center}
+    
+        \begin{flushleft}
+        \end{flushleft}
+
+
+
+    \begin{flushleft}
+        \sffamily  % Cambiar a fuente sin serifas
+        El costo total por los estudios es de $\_\_\_\_\_$ . Sin embargo y por promocion ya que solicita diferentes estudios le estariammos cobrando $\_\_\_\_\_$ .  Este costo final, incluye
+        la realizacion de los estudios de laboratorio, toma de muestra a domicilio(sin costo adicional, independientes del lugar que nos indique) e informe de reultados (detallado y en formato digitall(correo electronico y WhatsApp)).\newline
+
+        Por otro lado, el tiempo de entrega de los resultados se estaria realizando el mismo dia de la toma de muestra. \newline
+        La presente cotización tiene una vigencia de \_\_\_ días naturales a partir de la fecha de emisión.
+    \end{flushleft}
+
+
+    \begin{flushleft}
+    \end{flushleft}
+
+    \begin{center}
+        \textcolor{blue}{\textbf{\sffamily Consulta a tu médico, es el único facultado para indicar el tipo de estudio a realizar en cada paciente.}}
+    \end{center}
+
+
+\end{document}
